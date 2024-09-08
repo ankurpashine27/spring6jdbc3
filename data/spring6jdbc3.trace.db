@@ -1,0 +1,6 @@
+2024-09-08 12:49:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE speaker ADD COLUMN [*]IF NOT EXIST skill VARCHAR(100)"; expected "identifier"; SQL statement:
+ALTER TABLE speaker ADD COLUMN IF NOT EXIST skill VARCHAR(100) [42001-214]
+2024-09-08 12:50:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE speaker ADD COLUMN [*]IF NOT EXIST skill VARCHAR(100)"; expected "identifier"; SQL statement:
+ALTER TABLE speaker ADD COLUMN IF NOT EXIST skill VARCHAR(100) [42001-214]
