@@ -1,6 +1,7 @@
 package com.pluralsight.conference;
 
 import com.pluralsight.conference.model.Speaker;
+import com.pluralsight.conference.util.ServiceError;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.ParameterizedTypeReference;
@@ -73,6 +74,22 @@ class Spring6jdbc3ApplicationTests {
         RestTemplate restTemplate = new RestTemplate();
 
         restTemplate.getForObject("http://localhost:8080/speaker/batch", Object.class);
+
+    }
+
+    @Test
+    void testDeleteSpeaker() {
+        RestTemplate restTemplate = new RestTemplate();
+
+        restTemplate.delete("http://localhost:8080/speaker/delete/{id}",  15);
+
+    }
+
+    @Test
+    void testException() {
+        RestTemplate restTemplate = new RestTemplate();
+
+        Speaker speaker = restTemplate.getForObject("http://localhost:8080/speaker/test", Speaker.class);
 
     }
 
