@@ -79,7 +79,6 @@ public class SpeakerRepositoryImpl implements SpeakerRepository {
 
     private Speaker getSpeaker(int id) {
 
-        jdbcTemplate.queryForObject("select * from speaker where id = ?", new SpeakerRowMapper(), id);
-
+        return jdbcTemplate.queryForObject("select * from speaker where id = ?", new SpeakerRowMapper(), id);
     }
 }
